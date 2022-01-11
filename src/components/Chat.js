@@ -33,7 +33,7 @@ const Chat = () => {
     //     })
     //     setMessages(items);
     //     items.splice(0, items.length)
-    //   });
+    //   });d
   }, []);
 
   useEffect(() => {
