@@ -3,7 +3,7 @@ import { db, auth } from "../firebase";
 import SendMessage from "./SendMessage";
 
 const Chat = () => {
-  const scroll = useRef(null)
+  const scroll = useRef(null);
   // const date = new Date();
   // const hours = date.getHours();
   // const minutes = date.getMinutes();
@@ -12,7 +12,7 @@ const Chat = () => {
 
   useEffect(() => {
     db.collection("messages")
-      .orderBy("createdAt" , "asc")
+      .orderBy("createdAt", "asc")
       .limit(1000)
       .onSnapshot((snapshot) => {
         setMessages(snapshot.docs.map((doc) => doc.data()));
@@ -36,9 +36,9 @@ const Chat = () => {
     //   });
   }, []);
 
-  useEffect(() =>{
-    scroll.current?.scrollIntoView({behaviour: "smooth"});
-  },[messages])
+  useEffect(() => {
+    scroll.current?.scrollIntoView({ behaviour: "smooth" });
+  }, [messages]);
 
   return (
     <div className="chatContainer">
@@ -53,11 +53,11 @@ const Chat = () => {
             >
               <img src={photoURL} alt="" />
               <p>{text}</p>
-              <p>{new Date(createdAt.seconds * 1000).toLocaleTimeString()}</p>
+              {/* <p>{new Date(createdAt.seconds * 1000).toLocaleTimeString()}</p> */}
             </div>
           </div>
         ))}
-        <div ref ={scroll} />
+        <div ref={scroll} />
       </div>
       <SendMessage />
     </div>
