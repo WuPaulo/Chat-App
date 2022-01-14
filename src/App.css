@@ -178,13 +178,13 @@ h3 {
   font-family: "Merriweather Sans", sans-serif;
 }
 
-.appContainer{
+.appContainer {
   border: blue 1px solid;
 }
 
 img {
   border-radius: 50%;
-  height: 50px;
+  height: 70px;
   border: 1px solid black;
   margin: 0 5px 0 5px;
 }
@@ -198,13 +198,15 @@ img {
   height: 80vh;
 }
 
-.received {
+.received h3 {
+  margin: 10px;
 }
 
 .received p {
   background-color: #3a3b3c;
-  padding: 10px 20px 10px 20px;
+  padding: 5px 10px 5px 10px;
   border-radius: 3000px;
+  font-size: 0.85rem;
 }
 
 .sent {
@@ -214,8 +216,14 @@ img {
 
 .sent p {
   background-color: #0084ff;
-  padding: 10px 20px 10px 20px;
+  padding: 5px 10px 5px 10px;
   border-radius: 3000px;
+  font-size: 0.85rem;
+}
+
+.sent h3 {
+  text-align: right;
+  margin: 10px;
 }
 
 .messages {
@@ -230,34 +238,34 @@ img {
   justify-content: flex-end;
 }
 
-
 .inputBox {
   margin-right: 5px;
   width: 50%;
   font-size: 125%;
 }
 
-
 /* dashboard code */
-.dashboard{
+.dashboard {
   display: flex;
   border-top: 1px solid #3b3f44;
   border-bottom: 1px solid #3b3f44;
   height: 80vh;
 }
 
-.profile{
+.profile {
   width: 25%;
   border-right: 1px solid #3b3f44;
   display: flex;
   flex-direction: column;
   text-align: center;
-
 }
 
-.profileInfo{
+.profileInfo {
   margin-top: 75px;
-  
+}
+
+.displayedName {
+  font-size: 1rem;
 }
 
 .profileInfo img {
@@ -267,16 +275,15 @@ img {
   margin: 0 5px 0 5px;
 }
 
-.profileInfo h2{
+.profileInfo h2 {
   margin: 10px 0 10px 0;
 }
 
-
-.chatContainer{
+.chatContainer {
   width: 75%;
 }
 
-.logInContainer{
+.logInContainer {
   width: 100%;
   display: flex;
   align-self: center;

@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { db, auth } from "../firebase";
 import SendMessage from "./SendMessage";
+import firebase from "firebase/compat/app";
 
 const Chat = () => {
   const scroll = useRef(null);
@@ -8,7 +9,6 @@ const Chat = () => {
   // const hours = date.getHours();
   // const minutes = date.getMinutes();
   const [messages, setMessages] = useState([]);
-  const items = [];
 
   useEffect(() => {
     db.collection("messages")
@@ -52,7 +52,12 @@ const Chat = () => {
               }`}
             >
               <img src={photoURL} alt="" />
-              <p>{text}</p>
+              <div>
+                <h3 className="displayedName">
+                  {firebase.auth().currentUser.displayName}
+                </h3>
+                <p>{text}</p>
+              </div>
               {/* <p>{new Date(createdAt.seconds * 1000).toLocaleTimeString()}</p> */}
             </div>
           </div>

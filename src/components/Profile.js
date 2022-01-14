@@ -6,12 +6,9 @@ const Profile = ({ user }) => {
     <div className="profile">
       <div className="profileInfo">
         {user ? (
-          <img
-            src={firebase.auth().currentUser.photoURL}
-            alt="user profile image"
-          />
+          <img src={firebase.auth().currentUser.photoURL} alt="user profile" />
         ) : (
-          <img src="./assets/personIcon.jpg" alt="user profile image" />
+          <img src="./assets/personIcon.jpg" alt="user profile" />
         )}
         {user ? (
           <h2>{firebase.auth().currentUser.displayName}</h2>

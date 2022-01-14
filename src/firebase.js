@@ -1,4 +1,4 @@
-import firebase from 'firebase/compat/app';
+import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
 import "firebase/compat/auth";
 import "firebase/compat/analytics";
@@ -10,11 +10,10 @@ const firebaseApp = firebase.initializeApp({
   storageBucket: "fir-reactchat-37447.appspot.com",
   messagingSenderId: "929230378019",
   appId: "1:929230378019:web:ce373476ac919641290d96",
-  measurementId: "G-QSNLDNFK7K"
+  measurementId: "G-QSNLDNFK7K",
 });
 
-  const db = firebaseApp.firestore()
-  const auth = firebase.auth()
+const db = firebaseApp.firestore();
+const auth = firebase.auth();
 
-
-  export {db, auth}
+export { db, auth };
